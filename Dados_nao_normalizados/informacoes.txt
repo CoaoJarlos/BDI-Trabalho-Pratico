@@ -1,0 +1,1 @@
+Arquivos CSV não normalizados, por execer o armazenamento requisitado pelo github, alguns arquivos tiveram dados cortados, porém mantém o intacta a disposição original de suas tabelas.
