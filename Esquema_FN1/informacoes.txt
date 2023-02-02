@@ -1,0 +1,1 @@
+Nenhuma das tabelas possui tabelas aninhadas, ou seja, já estão na forma normal 1
