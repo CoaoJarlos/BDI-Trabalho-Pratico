@@ -1,1 +1,0 @@
-BPC(*cod_BPC, *numero_beneficiario, mes_competencia, mes_referencia, uf, cod_unicipio, come_municipio, nis_beneficiario, nome_beneficiario, nis_representante, cpf_representante, nome_representante, beneficio_concedido_judicialmente, valor_parcela)
