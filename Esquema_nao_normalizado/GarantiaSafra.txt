@@ -1,1 +1,1 @@
-GarantiaSafra(NISFavorecido*, MesReferencia, MesCompetencia, UF, NomeFavorecido, ValorParcela)
+GarantiaSafra (NISFavorecido*, Ano, MesReferencia, MesCompetencia, UF, NomeFavorecido, ValorParcela)
