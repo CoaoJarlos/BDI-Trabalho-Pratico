@@ -1,1 +1,1 @@
-PETI(*NISFavorecido, Ano, MesReferencia, UF, CodigoSIAFIMunicipio, NomeMunicipio, NomeFavorecido, SituacaoBeneficio, ValorParcela)
+PETI(*CodigoPETI, *NISFavorecido, Ano, MesReferencia, UF, CodigoSIAFIMunicipio, NomeMunicipio, NomeFavorecido, SituacaoBeneficio, ValorParcela)
