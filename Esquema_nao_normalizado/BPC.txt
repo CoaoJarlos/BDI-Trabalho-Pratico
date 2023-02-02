@@ -1,1 +1,1 @@
-BPC(mes_competencia, mes_referencia, uf, cod_unicipio, come_municipio, nis_beneficiario, nome_beneficiario, nis_representante, cpf_representante, nome_representante, *numero_beneficiario, beneficio_concedido_judicialmente, valor_parcela)
+BPC(ano, mes_competencia, mes_referencia, uf, cod_unicipio, come_municipio, nis_beneficiario, nome_beneficiario, nis_representante, cpf_representante, nome_representante, *numero_beneficiario, beneficio_concedido_judicialmente, valor_parcela)
