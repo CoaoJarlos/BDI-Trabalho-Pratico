@@ -1,0 +1,1 @@
+AuxilioEmergencial(*NISFavorecido, Ano, MesCompetencia, MesReferencia, UF, CodigoMunicipioSIAFI, NomeMunicipio, CPFFavorecido, NomeFavorecido, ValorParcela)
