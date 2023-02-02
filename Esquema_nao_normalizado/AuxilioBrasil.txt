@@ -1,1 +1,1 @@
-AuxilioBrasil(NIS*, MesCompetencia, MesReferencia, UF, CodigoMunicipio, CPF, Nome, ValorParcela)
+AuxilioBrasil(NISFavorecido*, MesCompetencia, MesReferencia, UF, CodigoMunicipio, CPFFavorecido, NomeFavorecido, ValorParcela)
