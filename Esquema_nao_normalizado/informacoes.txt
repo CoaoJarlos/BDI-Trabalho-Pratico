@@ -1,0 +1,1 @@
+Dados implicitos em comum com todos os arquivos: mes, ano
