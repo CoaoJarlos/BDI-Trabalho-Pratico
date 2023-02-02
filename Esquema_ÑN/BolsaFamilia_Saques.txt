@@ -1,1 +1,1 @@
-BolsaFamiliaSaques(*NISFavorecido, ano, MesCompetencia, MesReferencia, UF, CodigoMunicipioSIAFI, NomeMunicipio, CPFFavorecido, NomeFavorecido, DataSaque, ValorParcela)
+BolsaFamiliaSaques(*CodigoBolsaSaque, *NISFavorecido, ano, MesCompetencia, MesReferencia, UF, CodigoMunicipioSIAFI, NomeMunicipio, CPFFavorecido, NomeFavorecido, DataSaque, ValorParcela)
