@@ -1,2 +1,3 @@
-GarantiaSafra (*CodGarantiaSafra, *NISFavorecido, Ano, MesReferencia, MesCompetencia, UF, CódigoMunicipio, NomeMunicipio, ValorParcela)
 NIS (NISFavorecido, NomeFavorecido)
+GarantiaSafra (*CodGarantiaSafra, *NISFavorecido, Ano, MesReferencia, MesCompetencia, UF, CódigoMunicipio, NomeMunicipio, ValorParcela)
+NISFavorecido referencia NIS
