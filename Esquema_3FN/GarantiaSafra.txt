@@ -1,4 +1,6 @@
 GarantiaSafra (*CodGarantiaSafra, *NISFavorecido, AnoMes, CódigoMunicipio, ValorParcela)
+ NISFavorecido referencia NIS
+ CódigoMunicipio referencia Municipio
 NIS (NISFavorecido, NomeFavorecido)
 Municipio(*CodigoMunicipio, NomeMunicipio, UF)
-NISFavorecido referencia NIS
+
