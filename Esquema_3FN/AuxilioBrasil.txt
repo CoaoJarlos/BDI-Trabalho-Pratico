@@ -1,0 +1,3 @@
+AuxilioBrasil (*CodAuxilioBrasil, *NISFavorecido, AnoMes, CodigoMunicipio, ValorParcela)
+NIS (*NISFavorecido, CPFFavorecido, NomeFavorecido)
+Municipio (*CodigoMunicipio, NomeMunicipio, UF)
