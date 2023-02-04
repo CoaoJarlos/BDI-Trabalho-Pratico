@@ -1,0 +1,5 @@
+BPC (*cod_BPC, *numero_beneficiario, AnoMes, cod_municipio, beneficio_concedido_judicialmente, valor_parcela)
+Municipio (*cod_municipio, nome_municipio, uf)
+Beneficiario (*numero_beneficiario, nis_beneficiario, nis_representante)
+NISBeneficiario(*nis_beneficiario, nome_beneficiario)
+NISRepresentante(*nis_representante, cpf_representante, nome_representante)
