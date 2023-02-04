@@ -1,4 +1,6 @@
 PETI(*CodigoPETI, *NISFavorecido, AnoMes, CodigoSIAFIMunicipio, SituacaoBeneficio, ValorParcela)
+  NISFavorecido referencia NIS
+  CodigoSIAFIMunicipio referencia Municipio
 NIS (*NISFavorecido, NomeFavorecido)
 Municipio(*CodigoMunicipioSIAFI, NomeMunicipio, UF)
-NISFavorecido referencia NIS
+
