@@ -3,3 +3,5 @@ Municipio (*cod_municipio, nome_municipio, uf)
 Beneficiario (*numero_beneficiario, nis_beneficiario, nis_representante)
 NISBeneficiario(*nis_beneficiario, nome_beneficiario)
 NISRepresentante(*nis_representante, cpf_representante, nome_representante)
+
+numero_beneficiario referencia Beneficiario
