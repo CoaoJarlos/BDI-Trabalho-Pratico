@@ -1,3 +1,4 @@
 BolsaFamiliaSaques(*codBolsaFamiliaSaques,*NISFavorecido, AnoMes, CodigoMunicipioSIAFI, DataSaque, ValorParcela)
 NIS(*NISFavorecido, NomeFavorecido, CPFFavorecido)
 Municipio(*CodigoMunicipioSIAFI, NomeMunicipio, UF)
+NISFavorecido referencia NIS
