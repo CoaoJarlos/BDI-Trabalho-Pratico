@@ -1,2 +1,2 @@
-BolsaFamiliaPagamentos (*CodBolsaPagamento, *NISFavorecido, Ano, MesCompetencia, MesReferencia, CodigoMunicipio, ValorParcela)
+BolsaFamiliaPagamentos (*CodBolsaPagamento, *NISFavorecido, Ano, MesCompetencia, MesReferencia, CodigoMunicipio,NomeMunicipio, ValorParcela)
 NIS(*NISFavorecido, NomeFavorecido, CPFFavorecido)
