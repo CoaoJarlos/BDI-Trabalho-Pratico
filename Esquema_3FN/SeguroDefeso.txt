@@ -1,0 +1,3 @@
+SeguroDefeso(*cod_seguroDefeso, *nis_favorecido, mes_referencia, cod_municipio, rgp_favorecido, valor_parcela)
+NIS (*nis_favorecido, cpf_favorecido, nome_favorecido)
+Municipio(cod_municipio, nome_municipio, uf)
