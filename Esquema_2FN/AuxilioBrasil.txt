@@ -1,2 +1,2 @@
-AuxilioBrasil (*CodAuxilioBrasil, *NISFavorecido, Ano, MesCompetencia, MesReferencia, UF, CodigoMunicipio, ValorParcela)
+AuxilioBrasil (*CodAuxilioBrasil, *NISFavorecido, Ano, MesCompetencia, MesReferencia, UF, CodigoMunicipio, NomeMunicipio, ValorParcela)
 NIS (*NISFavorecido, CPFFavorecido, NomeFavorecido)
