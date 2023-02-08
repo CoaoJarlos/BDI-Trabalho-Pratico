@@ -1,1 +1,1 @@
-SeguroDefeso(*cod_seguroDefeso, *nis_favorecido, mes_referencia, uf, cod_municipio, nome_unicipio, cpf_favorecido, rgp_favorecido, nome_favorecido, valor_parcela)
+SeguroDefeso(*cod_seguroDefeso, *nis_favorecido, mes_referencia, uf, cod_municipio_siafi, nome_municipio, cpf_favorecido, rgp_favorecido, nome_favorecido, valor_parcela)
