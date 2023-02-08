@@ -1,1 +1,1 @@
-AuxilioEmergencial(*CodigoAuxilioEmergencial, *NISFavorecido, Ano, MesCompetencia, MesReferencia, UF, CodigoMunicipioSIAFI, NomeMunicipio, CPFFavorecido, NomeFavorecido, ValorParcela)
+AuxilioEmergencial(*CodigoAuxilioEmergencial,*NISBeneficiario, MesDisponibilizado, Ano, UF, CodigoMunicipioIBGE, NomeMunicipio, CPFBeneficiario, NomeBeneficiario, NISResponsavel, CPFResponsavel, NomeResponsavel, Enquadramento, Parcela, Observacao, ValorBeneficio)
