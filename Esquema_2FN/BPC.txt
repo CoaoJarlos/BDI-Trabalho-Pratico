@@ -1,3 +1,3 @@
-Beneficiario (*numero_beneficiario, nis_beneficiario, nome_beneficiario, nis_representante, cpf_representante, nome_representante)
-BPC(*cod_BPC, *numero_beneficiario, mes_competencia, mes_referencia, uf, cod_municipio, nome_municipio, beneficio_concedido_judicialmente, valor_parcela)
+Beneficiario (*numero_beneficiario, nis_beneficiario, cpf_beneficiario, nome_beneficiario, nis_representante, cpf_representante, nome_representante)
+BPC(*cod_BPC, *numero_beneficiario, mes_competencia, mes_referencia, uf, cod_municipio_siafi, nome_municipio, beneficio_concedido_judicialmente, valor_parcela)
 numero_beneficiario referencia Beneficiario
