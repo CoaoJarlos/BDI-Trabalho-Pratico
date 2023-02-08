@@ -1,12 +1,3 @@
-CREATE DATABASE IF NOT EXISTS beneficiosCidadao 
-    WITH 
-    OWNER = postgres
-    ENCODING = 'UTF8'
-    LC_COLLATE = 'Portuguese_Brazil.1252'
-    LC_CTYPE = 'Portuguese_Brazil.1252'
-    TABLESPACE = pg_default
-    CONNECTION LIMIT = -1;
-    
 CREATE TABLE NIS (NISFavorecido varchar(20), 
                   CPFFavorecido varchar(15), 
                   NomeFavorecido varchar(60),
@@ -30,7 +21,7 @@ CREATE TABLE AuxilioBrasil (CodAuxilioBrasil numeric(15,0),
                             AnoMes numeric(10,0), 
                             CodigoMunicipio numeric(15,0), 
                             ValorParcela numeric(10,2),
-                            PRIMARYKEY (CodAuxilioBrasil, NISFavorecido),
+                            PRIMARY KEY (CodAuxilioBrasil, NISFavorecido),
                             FOREIGN KEY (NISFavorecido) references NIS,
                             FOREIGN KEY (CodigoMunicipio) references Municipio
  );
@@ -40,7 +31,7 @@ CREATE TABLE AuxilioEmergencial (CodAuxilioEmergencial numeric(15,0),
                             AnoMes numeric(10,0), 
                             CodigoMunicipio numeric(15,0), 
                             ValorParcela numeric(10,2),
-                            PRIMARYKEY (CodAuxilioEmergencial, NISFavorecido),
+                            PRIMARY KEY (CodAuxilioEmergencial, NISFavorecido),
                             FOREIGN KEY (NISFavorecido) references NIS,
                             FOREIGN KEY (CodigoMunicipio) references MunicipioSIAFI
  );
@@ -49,7 +40,7 @@ CREATE TABLE AuxilioEmergencial (CodAuxilioEmergencial numeric(15,0),
                             AnoMes numeric(10,0), 
                             CodigoMunicipio numeric(15,0), 
                             ValorParcela numeric(10,2),
-                            PRIMARYKEY (CodBolsaFamiliaPagamento, NISFavorecido),
+                            PRIMARY KEY (CodBolsaFamiliaPagamento, NISFavorecido),
                             FOREIGN KEY (NISFavorecido) references NIS,
                             FOREIGN KEY (CodigoMunicipio) references Municipio
  );
@@ -59,7 +50,7 @@ CREATE TABLE AuxilioEmergencial (CodAuxilioEmergencial numeric(15,0),
                             CodigoMunicipioSIAFI numeric(15,0), 
                             DataSaque date,
                             ValorParcela numeric(10,2),
-                            PRIMARYKEY (CodBolsaFamiliaSaques, NISFavorecido),
+                            PRIMARY KEY (CodBolsaFamiliaSaques, NISFavorecido),
                             FOREIGN KEY (NISFavorecido) references NIS,
                             FOREIGN KEY (CodigoMunicipioSIAFI) references MunicipioSIAFI
  );
@@ -68,7 +59,7 @@ CREATE TABLE AuxilioEmergencial (CodAuxilioEmergencial numeric(15,0),
                             AnoMes numeric(10,0), 
                             CodigoMunicipio numeric(15,0), 
                             ValorParcela numeric(10,2),
-                            PRIMARYKEY (CodGarantiaSafra, NISFavorecido),
+                            PRIMARY KEY (CodGarantiaSafra, NISFavorecido),
                             FOREIGN KEY (NISFavorecido) references NIS,
                             FOREIGN KEY (CodigoMunicipio) references Municipio
  );
@@ -76,9 +67,9 @@ CREATE TABLE AuxilioEmergencial (CodAuxilioEmergencial numeric(15,0),
                             NISFavorecido varchar(20), 
                             AnoMes numeric(10,0), 
                             CodigoMunicipioSIAFI numeric(15,0), 
-                            SituacaoBeneficio varchar(100);
+                            SituacaoBeneficio varchar(100),
                             ValorParcela numeric(10,2),
-                            PRIMARYKEY (CodigoPETI, NISFavorecido),
+                            PRIMARY KEY (CodigoPETI, NISFavorecido),
                             FOREIGN KEY (NISFavorecido) references NIS,
                             FOREIGN KEY (CodigoMunicipioSIAFI) references MunicipioSIAFI
  );
@@ -86,9 +77,9 @@ CREATE TABLE AuxilioEmergencial (CodAuxilioEmergencial numeric(15,0),
                             NISFavorecido varchar(20), 
                             mesReferencia numeric(10,0), 
                             CodigoMunicipio numeric(15,0), 
-                            rgpFavorecido varchar(100);
+                            rgpFavorecido varchar(100),
                             ValorParcela numeric(10,2),
-                            PRIMARYKEY (CodigoSeguroDefeso, NISFavorecido),
+                            PRIMARY KEY (CodigoSeguroDefeso, NISFavorecido),
                             FOREIGN KEY (NISFavorecido) references NIS,
                             FOREIGN KEY (CodigoMunicipio) references Municipio
  );
@@ -103,21 +94,21 @@ CREATE TABLE NISBeneficiario (NISBeneficiario varchar(20),
  );
 CREATE TABLE Beneficiario( numeroBeneficiario varchar(20),
                             nisBeneficiario varchar(20),
-                            PRIMARYKEY (numeroBenificiario),
-                            FOREIGN KEY (nisBeneficiario) references NISBeneficiario,
+                            PRIMARY KEY (numeroBeneficiario),
+                            FOREIGN KEY (nisBeneficiario) references NISBeneficiario
  );
  CREATE TABLE Representante( numeroBeneficiario varchar(20),
                             nisRepresentante varchar(20),
-                            PRIMARYKEY (numeroBenificiario),
-                            FOREIGN KEY (nisBeneficiario) references NISRepresentante,
+                            PRIMARY KEY (numeroBeneficiario),
+                            FOREIGN KEY (nisRepresentante) references NISRepresentante
  );
   CREATE TABLE BPC (        CodBPC numeric(15,0), 
                             numeroBeneficiario varchar(20), 
                             AnoMes numeric(10,0), 
                             CodigoMunicipio numeric(15,0), 
-                            BeneficioConcedidoJudicialmente varchar(100);
+                            BeneficioConcedidoJudicialmente varchar(100),
                             ValorParcela numeric(10,2),
-                            PRIMARYKEY (CodigoPETI, numeroBenificiario),
+                            PRIMARY KEY (CodBPC, numeroBeneficiario),
                             FOREIGN KEY (numeroBeneficiario) references Beneficiario,
                             FOREIGN KEY (CodigoMunicipio) references Municipio
  );
