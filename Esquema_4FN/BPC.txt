@@ -2,7 +2,7 @@ BPC (*cod_BPC, *numero_beneficiario, AnoMes, cod_municipio, beneficio_concedido_
   numero_beneficiario referencia Beneficiario
   cod_municipio referencia Municipio
 Municipio (*cod_municipio, nome_municipio, uf)
-Beneficiario(*numero_beneficiario, nis_beneficiario)
+Beneficiario(*numero_beneficiario, nis_beneficiario, cpf_beneficiario)
   nis_beneficiario referencia NISBeneficiario
 Representante(*numero_beneficiario, nis_representante)
   nis_representante referencia NISRepresentante
