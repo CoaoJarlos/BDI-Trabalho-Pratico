@@ -1,0 +1,34 @@
+NIS (*NISFavorecido, CPFFavorecido, NomeFavorecido)
+MunicipioSIAFI(*CodigoMunicipioSIAFI, NomeMunicipio, UF)
+MunicipioIBGE(*CodigoMunicipioIBGE,NomeMunicipio, UF)
+
+AuxilioBrasil (*CodAuxilioBrasil, *NISFavorecido, AnoMes, CodigoMunicipioSIAFI, ValorParcela)
+  NISFavorecido referencia NIS
+  CodigoMunicipioSIAFI referencia MunicipioSIAFI
+
+AuxilioEmergencial(*CodigoAuxilioEmergencial, *NISResponsavel, *NISBeneficiario, AnoMes,CodigoMunicipioIBGE,Enquadramento, Parcela, Observacao, ValorBeneficio)
+  NISBeneficiario referencia NIS
+  NISResponsavel referencia NIS
+  CodigoMunicipioIBGE referencia MunicipioIBGE
+
+BPC (*CodBPC, *NumeroBeneficiario, AnoMes, CodMunicipioSiafi, BeneficioConcedidoJudicialmente, ValorParcela)
+  NumeroBeneficiario referencia Beneficiario
+  NumeroBeneficiario referencia Representante
+  CodMunicipioSiafi referencia MunicipioSIAFI
+  
+Beneficiario(*NumeroBeneficiario, NISBeneficiario)
+  NISBeneficiario referencia NIS
+Representante(*NumeroBeneficiario, NISRepresentante)
+  NISRepresentante referencia NIS
+  
+BolsaFamiliaPagamentos (*CodBolsaPagamento, *NISFavorecido, AnoMes, CodigoMunicipioSIAFI, ValorParcela)
+  NISFavorecido referencia NIS
+  CodigoMunicipioSIAFI referencia MunicipioSIAFI
+  
+BolsaFamiliaSaques(*codBolsaFamiliaSaques,*NISFavorecido, AnoMes, CodigoMunicipioSIAFI, DataSaque, ValorParcela)
+ NISFavorecido referencia NIS
+ CodigoMunicipioSIAFI referencia MunicipioSIAFI
+ 
+GarantiaSafra (*CodGarantiaSafra, *NISFavorecido, AnoMes, CódigoMunicipioSIAFI, ValorParcela)
+ NISFavorecido referencia NIS
+ CódigoMunicipioSIAFI referencia MunicipioSIAFI
