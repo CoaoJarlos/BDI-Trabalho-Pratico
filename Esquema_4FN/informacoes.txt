@@ -1,1 +1,1 @@
-
+Unica tabela que encontramos dependências multivaloradas foi a do BPC, sendo ela a unica a passar pela 4FN
