@@ -1,3 +1,4 @@
-NIS (*NISFavorecido, CPFFavorecido, NomeFavorecido)
-AuxilioEmergencial(*CodigoAuxilioEmergencial, *NISFavorecido, Ano, MesCompetencia, MesReferencia, UF, CodigoMunicipioSIAFI, NomeMunicipio, ValorParcela)
-NISFavorecido referencia NIS
+NIS (*NISBeneficiario, CPFBeneficiario, NomeBeneficiario, NISResponsavel, CPFResponsavel, NomeResponsavel)
+AuxilioEmergencial(*CodigoAuxilioEmergencial,*NISBeneficiario, MesDisponibilizado, Ano, UF, 
+CodigoMunicipioIBGE, NomeMunicipio, Enquadramento, Parcela, Observacao, ValorBeneficio)
+NISBeneficiario referencia NIS
