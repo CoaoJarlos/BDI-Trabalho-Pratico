@@ -1,4 +1,4 @@
 NIS (*NISBeneficiario, CPFBeneficiario, NomeBeneficiario, NISResponsavel, CPFResponsavel, NomeResponsavel)
 NISBeneficiario referencia NIS
-AuxilioEmergencial(*CodigoAuxilioEmergencial,*NISBeneficiario, MesDisponibilizado, Ano, Enquadramento, Parcela, Observacao, ValorBeneficio)
+AuxilioEmergencial(*CodigoAuxilioEmergencial,*NISBeneficiario, CodigoMunicipioIBGE, MesDisponibilizado, Ano, Enquadramento, Parcela, Observacao, ValorBeneficio)
 Municipio (*CodigoMunicipioIBGE, NomeMunicipio, UF)
