@@ -1,6 +1,5 @@
-AuxilioBrasil (*CodAuxilioBrasil, *NISFavorecido, AnoMes, CodigoMunicipio, ValorParcela)
+AuxilioBrasil (*CodAuxilioBrasil, *NISFavorecido, AnoMes, CodigoMunicipioSIAFI, ValorParcela)
   NISFavorecido referencia NIS
-  CodigoMunicipio referencia Municipio
+  CodigoMunicipioSIAFI referencia Municipio
 NIS (*NISFavorecido, CPFFavorecido, NomeFavorecido)
-Municipio (*CodigoMunicipio, NomeMunicipio, UF)
-
+Municipio (*CodigoMunicipioSIAFI, NomeMunicipio, UF)
