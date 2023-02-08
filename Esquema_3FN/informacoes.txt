@@ -1,1 +1,1 @@
-Auxilio Brasil teve MesCompetencia e MesReferencia unificados pois possuiam a mesma informação e transformados em AnoMes, ano foi removido pois é possivel acessar na nova coluna.
+Algumas tabelas com MesCompetencia e/ou MesReferencia tiveram tais colunas unificados pois possuiam a mesma informação e transformados em AnoMes, ano foi removido pois é possivel acessar na nova coluna.
