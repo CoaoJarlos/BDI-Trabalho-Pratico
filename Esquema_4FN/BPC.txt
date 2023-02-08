@@ -1,5 +1,6 @@
 BPC (*cod_BPC, *numero_beneficiario, AnoMes, cod_municipio_siafi, beneficio_concedido_judicialmente, valor_parcela)
   numero_beneficiario referencia Beneficiario
+  numero_beneficiario referencia Representante
   cod_municipio_siafi referencia Municipio
 Municipio (*cod_municipio_siafi, nome_municipio, uf)
 Beneficiario(*numero_beneficiario, nis_beneficiario)
