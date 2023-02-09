@@ -1,0 +1,3 @@
+-- View para visualizar NIS de quem nao possui cpf cadastrado
+CREATE VIEW	cpf_nao_informado AS
+SELECT nisfavorecido FROM NIS WHERE cpffavorecido = 'Nao Informado'
