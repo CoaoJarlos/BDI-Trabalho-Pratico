@@ -1,0 +1,4 @@
+-- VIEW para identificar os diferentes estados que abragem a tabela municipiosiafi
+
+CREATE VIEW estados_siafi AS
+SELECT DISTINCT UF FROM municipiosiafi
