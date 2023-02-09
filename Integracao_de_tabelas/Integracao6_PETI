@@ -29,10 +29,10 @@ BolsaSaques(*CodBolsaSaques,*NISFavorecido, AnoMes, CodigoMunicipioSIAFI, DataSa
  NISFavorecido referencia NIS
  CodigoMunicipioSIAFI referencia MunicipioSIAFI
  
-GarantiaSafra (*CodGarantiaSafra, *NISFavorecido, AnoMes, CódigoMunicipioSIAFI, ValorParcela)
+GarantiaSafra (*CodGarantiaSafra, *NISFavorecido, AnoMes, CodigoMunicipioSIAFI, ValorParcela)
  NISFavorecido referencia NIS
- CódigoMunicipioSIAFI referencia MunicipioSIAFI
+ CodigoMunicipioSIAFI referencia MunicipioSIAFI
  
-PETI(*CodigoPETI, *NISFavorecido, AnoMes, CodigoSIAFIMunicipio, SituacaoBeneficio, ValorParcela)
+PETI(*CodigoPETI, *NISFavorecido, AnoMes, CodigoMunicipioSIAFI, SituacaoBeneficio, ValorParcela)
   NISFavorecido referencia NIS
-  CodigoSIAFIMunicipio referencia MunicipioSIAFI
+  CodigoMunicipioSIAFI referencia MunicipioSIAFI
