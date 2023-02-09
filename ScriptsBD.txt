@@ -1,27 +1,27 @@
 CREATE DATABASE beneficios_ao_cidadao
 
-CREATE TABLE NIS (NISFavorecido varchar(20), 
-                  CPFFavorecido varchar(15) NOT NULL, 
-                  NomeFavorecido varchar(60) NOT NULL,
+CREATE TABLE NIS (NISFavorecido varchar, 
+                  CPFFavorecido varchar NOT NULL, 
+                  NomeFavorecido varchar NOT NULL,
                   PRIMARY KEY(NISFavorecido)
  );
  
  CREATE TABLE MunicipioSIAFI (CodigoMunicipioSIAFI numeric(15,0),
-                        NomeMunicipio varchar(30) NOT NULL, 
-                        UF varchar(2) NOT NULL,
+                        NomeMunicipio varchar NOT NULL, 
+                        UF varchar NOT NULL,
                         PRIMARY KEY(CodigoMunicipioSIAFI)
  );
  
 CREATE TABLE MunicipioIBGE (CodigoMunicipioIBGE numeric(15,0),
-                        NomeMunicipio varchar(30) NOT NULL, 
-                        UF varchar(2) NOT NULL,
+                        NomeMunicipio varchar NOT NULL, 
+                        UF varchar NOT NULL,
                         PRIMARY KEY(CodigoMunicipioIBGE)
  );
  
 
     
 CREATE TABLE AuxilioBrasil (CodAuxilioBrasil numeric(15,0), 
-                            NISFavorecido varchar(20) NOT NULL, 
+                            NISFavorecido varchar NOT NULL, 
                             AnoMes numeric(10,0) NOT NULL, 
                             CodigoMunicipioSIAFI numeric(15,0) NULL, 
                             ValorParcela numeric(10,2) NOT NULL,
@@ -31,8 +31,8 @@ CREATE TABLE AuxilioBrasil (CodAuxilioBrasil numeric(15,0),
  );
      
 CREATE TABLE AuxilioEmergencial (CodAuxilioEmergencial numeric(15,0), 
-                            NISResponsavel varchar(20) NOT NULL, 
-                            NISBeneficiario varchar(20) NOT NULL,
+                            NISResponsavel varchar NOT NULL, 
+                            NISBeneficiario varchar NOT NULL,
                             AnoMes numeric(10,0), 
                             CodigoMunicipioIBGE numeric(15,0), 
                             Enquadramento VARCHAR NOT NULL,
@@ -45,21 +45,21 @@ CREATE TABLE AuxilioEmergencial (CodAuxilioEmergencial numeric(15,0),
                             FOREIGN KEY (CodigoMunicipioIBGE) references MunicipioIBGE
  );
  
- CREATE TABLE Beneficiario( NumeroBeneficiario varchar(20),
-                            NISBeneficiario varchar(20),
+ CREATE TABLE Beneficiario( NumeroBeneficiario varchar,
+                            NISBeneficiario varchar,
                             PRIMARY KEY (NumeroBeneficiario),
                             FOREIGN KEY (NISBeneficiario) references NIS
  );
  
-CREATE TABLE Representante( NumeroBeneficiario varchar(20),
-                            NISRepresentante varchar(20),
+CREATE TABLE Representante( NumeroBeneficiario varchar,
+                            NISRepresentante varchar,
                             PRIMARY KEY (NumeroBeneficiario),
                             FOREIGN KEY (NISRepresentante) references NIS
  );
   
  
 CREATE TABLE BPC (        CodBPC numeric(15,0), 
-                            NumeroBeneficiario varchar(20), 
+                            NumeroBeneficiario varchar, 
                             AnoMes numeric(10,0), 
                             CodigoMunicipioSIAFI numeric(15,0), 
                             BeneficioConcedidoJudicialmente varchar(100),
@@ -71,7 +71,7 @@ CREATE TABLE BPC (        CodBPC numeric(15,0),
  
 
  CREATE TABLE BolsaPagamentos (CodBolsaPagamento numeric(15,0), 
-                            NISFavorecido varchar(20), 
+                            NISFavorecido varchar, 
                             AnoMes numeric(10,0), 
                             CodigoMunicipioSIAFI numeric(15,0), 
                             ValorParcela numeric(10,2),
@@ -80,7 +80,7 @@ CREATE TABLE BPC (        CodBPC numeric(15,0),
                             FOREIGN KEY (CodigoMunicipioSIAFI) references MunicipioSIAFI
  );
  CREATE TABLE BolsaSaques(CodBolsaSaques numeric(15,0), 
-                            NISFavorecido varchar(20), 
+                            NISFavorecido varchar, 
                             AnoMes numeric(10,0),   
                             CodigoMunicipioSIAFI numeric(15,0), 
                             DataSaque date,
@@ -90,7 +90,7 @@ CREATE TABLE BPC (        CodBPC numeric(15,0),
                             FOREIGN KEY (CodigoMunicipioSIAFI) references MunicipioSIAFI
  );
  CREATE TABLE GarantiaSafra (CodGarantiaSafra numeric(15,0), 
-                            NISFavorecido varchar(20), 
+                            NISFavorecido varchar, 
                             AnoMes numeric(10,0), 
                             CodigoMunicipioSIAFI numeric(15,0), 
                             ValorParcela numeric(10,2),
@@ -99,7 +99,7 @@ CREATE TABLE BPC (        CodBPC numeric(15,0),
                             FOREIGN KEY (CodigoMunicipioSIAFI) references MunicipioSIAFI
  );
  CREATE TABLE PETI (CodigoPETI numeric(15,0), 
-                            NISFavorecido varchar(20), 
+                            NISFavorecido varchar, 
                             AnoMes numeric(10,0), 
                             CodigoMunicipioSIAFI numeric(15,0), 
                             SituacaoBeneficio varchar(100),
@@ -109,7 +109,7 @@ CREATE TABLE BPC (        CodBPC numeric(15,0),
                             FOREIGN KEY (CodigoMunicipioSIAFI) references MunicipioSIAFI
  );
   CREATE TABLE SeguroDefeso (CodigoSeguroDefeso numeric(15,0), 
-                            NISFavorecido varchar(20), 
+                            NISFavorecido varchar, 
                             AnoMes numeric(10,0), 
                             CodigoMunicipioSIAFI numeric(15,0), 
                             RGPFavorecido varchar(100),
@@ -118,4 +118,3 @@ CREATE TABLE BPC (        CodBPC numeric(15,0),
                             FOREIGN KEY (NISFavorecido) references NIS,
                             FOREIGN KEY (CodigoMunicipioSIAFI) references MunicipioSIAFI
  );
-
