@@ -1,67 +1,102 @@
+CREATE DATABASE beneficios_ao_cidadao
+
 CREATE TABLE NIS (NISFavorecido varchar(20), 
-                  CPFFavorecido varchar(15), 
-                  NomeFavorecido varchar(60),
+                  CPFFavorecido varchar(15) NOT NULL, 
+                  NomeFavorecido varchar(60) NOT NULL,
                   PRIMARY KEY(NISFavorecido)
  );
  
-CREATE TABLE Municipio (CodigoMunicipio numeric(15,0),
-                        NomeMunicipio varchar(30), 
-                        UF varchar(2),
-                        PRIMARY KEY(CodigoMunicipio)
- );
- 
  CREATE TABLE MunicipioSIAFI (CodigoMunicipioSIAFI numeric(15,0),
-                        NomeMunicipio varchar(30), 
-                        UF varchar(2),
+                        NomeMunicipio varchar(30) NOT NULL, 
+                        UF varchar(2) NOT NULL,
                         PRIMARY KEY(CodigoMunicipioSIAFI)
  );
+ 
+CREATE TABLE MunicipioIBGE (CodigoMunicipioIBGE numeric(15,0),
+                        NomeMunicipio varchar(30) NOT NULL, 
+                        UF varchar(2) NOT NULL,
+                        PRIMARY KEY(CodigoMunicipioIBGE)
+ );
+ 
+
     
 CREATE TABLE AuxilioBrasil (CodAuxilioBrasil numeric(15,0), 
-                            NISFavorecido varchar(20), 
-                            AnoMes numeric(10,0), 
-                            CodigoMunicipio numeric(15,0), 
-                            ValorParcela numeric(10,2),
+                            NISFavorecido varchar(20) NOT NULL, 
+                            AnoMes numeric(10,0) NOT NULL, 
+                            CodigoMunicipioSIAFI numeric(15,0) NULL, 
+                            ValorParcela numeric(10,2) NOT NULL,
                             PRIMARY KEY (CodAuxilioBrasil, NISFavorecido),
                             FOREIGN KEY (NISFavorecido) references NIS,
-                            FOREIGN KEY (CodigoMunicipio) references Municipio
+                            FOREIGN KEY (CodigoMunicipioSIAFI) references MunicipioSIAFI
  );
      
 CREATE TABLE AuxilioEmergencial (CodAuxilioEmergencial numeric(15,0), 
+                            NISResponsavel varchar(20) NOT NULL, 
+                            NISBeneficiario varchar(20) NOT NULL,
+                            AnoMes numeric(10,0), 
+                            CodigoMunicipioIBGE numeric(15,0), 
+                            Enquadramento VARCHAR NOT NULL,
+                            Parcela MONEY NOT NULL,
+                            Observacao VARCHAR,
+                            ValorBeneficio numeric(10,2),
+                            PRIMARY KEY (CodAuxilioEmergencial, NISResponsavel, NISBeneficiario),
+                            FOREIGN KEY (NISResponsavel) references NIS,
+                            FOREIGN KEY (NISBeneficiario) references NIS,                            
+                            FOREIGN KEY (CodigoMunicipioIBGE) references MunicipioIBGE
+ );
+ 
+ CREATE TABLE Beneficiario( NumeroBeneficiario varchar(20),
+                            NISBeneficiario varchar(20),
+                            PRIMARY KEY (NumeroBeneficiario),
+                            FOREIGN KEY (NISBeneficiario) references NIS
+ );
+ 
+CREATE TABLE Representante( NumeroBeneficiario varchar(20),
+                            NISRepresentante varchar(20),
+                            PRIMARY KEY (NumeroBeneficiario),
+                            FOREIGN KEY (NISRepresentante) references NIS
+ );
+  
+ 
+CREATE TABLE BPC (        CodBPC numeric(15,0), 
+                            NumeroBeneficiario varchar(20), 
+                            AnoMes numeric(10,0), 
+                            CodigoMunicipioSIAFI numeric(15,0), 
+                            BeneficioConcedidoJudicialmente varchar(100),
+                            ValorParcela numeric(10,2),
+                            PRIMARY KEY (CodBPC, NumeroBeneficiario),
+                            FOREIGN KEY (numeroBeneficiario) references Beneficiario,
+                            FOREIGN KEY (CodigoMunicipioSIAFI) references MunicipioSIAFI
+ );
+ 
+
+ CREATE TABLE BolsaPagamentos (CodBolsaPagamento numeric(15,0), 
                             NISFavorecido varchar(20), 
                             AnoMes numeric(10,0), 
-                            CodigoMunicipio numeric(15,0), 
+                            CodigoMunicipioSIAFI numeric(15,0), 
                             ValorParcela numeric(10,2),
-                            PRIMARY KEY (CodAuxilioEmergencial, NISFavorecido),
+                            PRIMARY KEY (CodBolsaPagamento, NISFavorecido),
                             FOREIGN KEY (NISFavorecido) references NIS,
-                            FOREIGN KEY (CodigoMunicipio) references MunicipioSIAFI
+                            FOREIGN KEY (CodigoMunicipioSIAFI) references MunicipioSIAFI
  );
- CREATE TABLE BolsaFamiliaPagamentos (CodBolsaFamiliaPagamento numeric(15,0), 
-                            NISFavorecido varchar(20), 
-                            AnoMes numeric(10,0), 
-                            CodigoMunicipio numeric(15,0), 
-                            ValorParcela numeric(10,2),
-                            PRIMARY KEY (CodBolsaFamiliaPagamento, NISFavorecido),
-                            FOREIGN KEY (NISFavorecido) references NIS,
-                            FOREIGN KEY (CodigoMunicipio) references Municipio
- );
- CREATE TABLE BolsaFamiliaSaques(CodBolsaFamiliaSaques numeric(15,0), 
+ CREATE TABLE BolsaSaques(CodBolsaSaques numeric(15,0), 
                             NISFavorecido varchar(20), 
                             AnoMes numeric(10,0),   
                             CodigoMunicipioSIAFI numeric(15,0), 
                             DataSaque date,
                             ValorParcela numeric(10,2),
-                            PRIMARY KEY (CodBolsaFamiliaSaques, NISFavorecido),
+                            PRIMARY KEY (CodBolsaSaques, NISFavorecido),
                             FOREIGN KEY (NISFavorecido) references NIS,
                             FOREIGN KEY (CodigoMunicipioSIAFI) references MunicipioSIAFI
  );
  CREATE TABLE GarantiaSafra (CodGarantiaSafra numeric(15,0), 
                             NISFavorecido varchar(20), 
                             AnoMes numeric(10,0), 
-                            CodigoMunicipio numeric(15,0), 
+                            CodigoMunicipioSIAFI numeric(15,0), 
                             ValorParcela numeric(10,2),
                             PRIMARY KEY (CodGarantiaSafra, NISFavorecido),
                             FOREIGN KEY (NISFavorecido) references NIS,
-                            FOREIGN KEY (CodigoMunicipio) references Municipio
+                            FOREIGN KEY (CodigoMunicipioSIAFI) references MunicipioSIAFI
  );
  CREATE TABLE PETI (CodigoPETI numeric(15,0), 
                             NISFavorecido varchar(20), 
@@ -75,40 +110,12 @@ CREATE TABLE AuxilioEmergencial (CodAuxilioEmergencial numeric(15,0),
  );
   CREATE TABLE SeguroDefeso (CodigoSeguroDefeso numeric(15,0), 
                             NISFavorecido varchar(20), 
-                            mesReferencia numeric(10,0), 
-                            CodigoMunicipio numeric(15,0), 
-                            rgpFavorecido varchar(100),
+                            AnoMes numeric(10,0), 
+                            CodigoMunicipioSIAFI numeric(15,0), 
+                            RGPFavorecido varchar(100),
                             ValorParcela numeric(10,2),
                             PRIMARY KEY (CodigoSeguroDefeso, NISFavorecido),
                             FOREIGN KEY (NISFavorecido) references NIS,
-                            FOREIGN KEY (CodigoMunicipio) references Municipio
+                            FOREIGN KEY (CodigoMunicipioSIAFI) references MunicipioSIAFI
  );
-CREATE TABLE NISBeneficiario (NISBeneficiario varchar(20), 
-                            NomeBeneficiario varchar(60),
-                            PRIMARY KEY(NISBeneficiario)
- );
- CREATE TABLE NISRepresentante (NISRepresentante varchar(20), 
-                            CPFRepresentante varchar(15),
-                            NomeRepresentante varchar(60),
-                            PRIMARY KEY(NISRepresentante)
- );
-CREATE TABLE Beneficiario( numeroBeneficiario varchar(20),
-                            nisBeneficiario varchar(20),
-                            PRIMARY KEY (numeroBeneficiario),
-                            FOREIGN KEY (nisBeneficiario) references NISBeneficiario
- );
- CREATE TABLE Representante( numeroBeneficiario varchar(20),
-                            nisRepresentante varchar(20),
-                            PRIMARY KEY (numeroBeneficiario),
-                            FOREIGN KEY (nisRepresentante) references NISRepresentante
- );
-  CREATE TABLE BPC (        CodBPC numeric(15,0), 
-                            numeroBeneficiario varchar(20), 
-                            AnoMes numeric(10,0), 
-                            CodigoMunicipio numeric(15,0), 
-                            BeneficioConcedidoJudicialmente varchar(100),
-                            ValorParcela numeric(10,2),
-                            PRIMARY KEY (CodBPC, numeroBeneficiario),
-                            FOREIGN KEY (numeroBeneficiario) references Beneficiario,
-                            FOREIGN KEY (CodigoMunicipio) references Municipio
- );
+
