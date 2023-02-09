@@ -25,7 +25,7 @@ BolsaFamiliaPagamentos (*CodBolsaPagamento, *NISFavorecido, AnoMes, CodigoMunici
   NISFavorecido referencia NIS
   CodigoMunicipioSIAFI referencia MunicipioSIAFI
   
-BolsaFamiliaSaques(*codBolsaFamiliaSaques,*NISFavorecido, AnoMes, CodigoMunicipioSIAFI, DataSaque, ValorParcela)
+BolsaSaques(*CodBolsaSaques,*NISFavorecido, AnoMes, CodigoMunicipioSIAFI, DataSaque, ValorParcela)
  NISFavorecido referencia NIS
  CodigoMunicipioSIAFI referencia MunicipioSIAFI
  
