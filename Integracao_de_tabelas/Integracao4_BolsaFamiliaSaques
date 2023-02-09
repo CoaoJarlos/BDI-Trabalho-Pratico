@@ -21,10 +21,10 @@ Beneficiario(*NumeroBeneficiario, NISBeneficiario)
 Representante(*NumeroBeneficiario, NISRepresentante)
   NISRepresentante referencia NIS
   
-BolsaFamiliaPagamentos (*CodBolsaPagamento, *NISFavorecido, AnoMes, CodigoMunicipioSIAFI, ValorParcela)
+BolsaPagamentos (*CodBolsaPagamento, *NISFavorecido, AnoMes, CodigoMunicipioSIAFI, ValorParcela)
   NISFavorecido referencia NIS
   CodigoMunicipioSIAFI referencia MunicipioSIAFI
   
-BolsaFamiliaSaques(*CodBolsaSaques,*NISFavorecido, AnoMes, CodigoMunicipioSIAFI, DataSaque, ValorParcela)
+BolsaSaques(*CodBolsaSaques,*NISFavorecido, AnoMes, CodigoMunicipioSIAFI, DataSaque, ValorParcela)
  NISFavorecido referencia NIS
  CodigoMunicipioSIAFI referencia MunicipioSIAFI
