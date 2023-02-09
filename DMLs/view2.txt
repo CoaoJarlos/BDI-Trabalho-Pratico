@@ -1,0 +1,5 @@
+--view criada para verificar a média do valor de parcelas de pagamento na tabela Pag. Bolsa Família no mês de janeiro de 2021
+CREATE VIEW valorMedioParcela AS
+SELECT AVG(valorparcela)
+FROM bolsapagamentos
+WHERE anomes='202101'
