@@ -1,0 +1,5 @@
+--view criada para conferência da soma dos valores de parcelas da tabela BPC concedidos judicialmente
+CREATE VIEW valorMedioJudicial AS
+SELECT SUM(valorparcela)
+FROM BPC
+WHERE beneficioconcedidojudicialmente='SIM'
