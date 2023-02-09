@@ -1,0 +1,4 @@
+-- View criada para encontrar todos nomes de pessoas e CPFs de quem esta incluso na tabela BolsaPagamentos
+
+CREATE VIEW pessoas_bolsa_pag as
+SELECT nomefavorecido, cpffavorecido FROM nis INNER JOIN bolsapagamentos ON nis.NISFavorecido = bolsapagamentos.NISFavorecido
