@@ -14,7 +14,7 @@ AuxilioEmergencial(*CodigoAuxilioEmergencial, *NISResponsavel, *NISBeneficiario,
 BPC (*CodBPC, *NumeroBeneficiario, AnoMes, CodMunicipioSiafi, BeneficioConcedidoJudicialmente, ValorParcela)
   NumeroBeneficiario referencia Beneficiario
   NumeroBeneficiario referencia Representante
-  CodMunicipioSiafi referencia MunicipioSIAFI
+  CodigoMunicipioSIAFI referencia MunicipioSIAFI
   
 Beneficiario(*NumeroBeneficiario, NISBeneficiario)
   NISBeneficiario referencia NIS
